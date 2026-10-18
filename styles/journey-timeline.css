@@ -1,0 +1,103 @@
+/* Journey timeline — part of Marc Canlas's existing purple bento design. */
+.journey-panel {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  margin-top:18px;
+  padding:32px 34px 24px;
+  border-radius:24px;
+  background:linear-gradient(113deg,rgba(34,16,59,.96),rgba(20,10,39,.95) 66%,rgba(38,20,70,.94));
+  box-shadow:0 18px 42px rgba(9,5,22,.13);
+}
+.journey-panel::after {
+  content:"";
+  position:absolute;
+  right:-110px;top:-220px;
+  width:450px;height:450px;
+  border:1px solid rgba(197,168,255,.09);
+  border-radius:50%;
+  box-shadow:0 0 0 55px rgba(197,168,255,.018),0 0 0 114px rgba(197,168,255,.015);
+  pointer-events:none;
+  z-index:-1;
+}
+.journey-header{display:flex;align-items:start;justify-content:space-between;gap:30px;margin-bottom:40px}
+.journey-kicker{display:flex;align-items:center;gap:10px;color:#bca0fa;font-size:10px;letter-spacing:.14em;font-weight:750}
+.journey-kicker-line{width:23px;height:1px;background:currentColor}
+.journey-header h3{font-size:clamp(23px,2.5vw,32px);line-height:1.15;letter-spacing:-.052em;margin:12px 0 9px;font-weight:750}
+.journey-header h3 em{font-family:'Instrument Serif',Georgia,serif;font-weight:400;font-style:italic;color:#c6afff;letter-spacing:-.02em}
+.journey-header p{font-size:12px;color:#b2a2c8;line-height:1.7;margin:0;max-width:525px}
+.journey-aside{display:flex;align-items:center;gap:12px;color:#8875a2;white-space:nowrap}
+.journey-aside-num{font-family:'Instrument Serif',Georgia,serif;font-size:50px;font-style:italic;color:#bca0fa;line-height:.93}
+.journey-aside>span:last-child{font-size:9px;line-height:1.65;letter-spacing:.12em;font-weight:700}
+.journey-track{position:relative}
+.journey-milestones{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;position:relative}
+.journey-rail{height:2px;position:absolute;top:12px;left:calc(10% - 0px);right:calc(10% - 0px);background:rgba(190,161,241,.21);overflow:hidden;border-radius:10px}
+.journey-progress{display:block;width:100%;height:100%;background:linear-gradient(90deg,#9274e0 0%,#c4adff 70%,#8cb4ff 100%);transform-origin:left center;box-shadow:0 0 10px rgba(185,155,255,.4)}
+.journey-milestone{display:flex;flex-direction:column;align-items:center;min-width:0;position:relative}
+.journey-dot{position:relative;z-index:1;display:block;width:26px;height:26px;border:1px solid rgba(201,174,255,.55);border-radius:100%;background:#24133e;box-shadow:0 0 0 5px #231338;flex:none}
+.journey-dot::before{content:"";position:absolute;inset:7px;background:#b89afd;border-radius:50%;transition:transform .25s ease,background .25s ease}
+.journey-milestone:hover .journey-dot::before{transform:scale(1.7);background:#d4c3ff}
+.journey-dot::after{content:"";position:absolute;left:50%;top:calc(100% + 5px);height:17px;width:1px;background:rgba(187,157,255,.4)}
+.journey-event{
+  margin-top:24px;width:100%;flex:1;position:relative;
+  padding:18px 16px 17px;
+  border:1px solid rgba(192,160,248,.17);
+  border-radius:16px 16px 16px 6px;
+  background:rgba(80,49,125,.14);
+  display:flex;flex-direction:column;
+  min-height:222px;
+  transition:transform .3s cubic-bezier(.2,.7,.2,1),border-color .3s,background .3s,box-shadow .3s;
+}
+.journey-milestone:nth-child(even) .journey-event{border-radius:16px 16px 6px 16px}
+.journey-milestone:hover .journey-event{transform:translateY(-5px);background:rgba(98,62,151,.22);border-color:rgba(200,170,255,.53);box-shadow:0 14px 28px rgba(12,6,26,.24)}
+.journey-event-top{display:flex;justify-content:space-between;gap:10px;align-items:center}
+.journey-event-top time{font-size:16px;line-height:1;font-weight:800;letter-spacing:-.04em;color:#c5aaff;font-variant-numeric:tabular-nums}
+.journey-event-index{font-size:9px;font-weight:800;letter-spacing:.13em;color:#736586}
+.journey-event h4{margin:16px 0 8px;font-size:14px;line-height:1.35;letter-spacing:-.02em;font-weight:740}
+.journey-event p{margin:0;color:#ab9bbf;font-size:11px;line-height:1.65}
+.journey-type{margin-top:auto;padding-top:18px;font-size:9px;letter-spacing:.115em;color:#8d7da9;font-weight:750;display:flex;align-items:center;gap:8px}
+.journey-milestone-current .journey-event{background:linear-gradient(150deg,rgba(99,67,152,.36),rgba(65,38,111,.19));border-color:rgba(184,150,252,.48)}
+.journey-milestone-current .journey-event-top time{color:#e3d6ff}
+.journey-milestone-current .journey-dot{background:#593987;border-color:#c3acff;box-shadow:0 0 0 5px #231338,0 0 0 8px rgba(177,142,255,.11)}
+.journey-milestone-current .journey-dot::before{background:#e0d3ff}
+.journey-type-current{color:#c9b4ff}
+.journey-type .live-dot{height:6px;width:6px;box-shadow:0 0 0 3px rgba(134,214,161,.11)}
+.journey-bottom{display:flex;justify-content:space-between;gap:15px;align-items:center;border-top:1px solid rgba(188,159,240,.12);margin-top:26px;padding-top:16px;color:#82739a;font-size:9px;font-weight:750;letter-spacing:.13em}
+.journey-bottom-arrow{color:#bca0fa;padding:0 6px;font-size:15px;vertical-align:-1px}
+/* Controlled entrance, triggered once on scroll. Without JavaScript, every item is visible. */
+.journey-enhanced .journey-progress{transform:scaleX(0)}
+.journey-enhanced.journey-visible .journey-progress{transform:scaleX(1);transition:transform 1.25s cubic-bezier(.17,.68,.22,1) .12s}
+.journey-enhanced.journey-visible .journey-event{animation:journey-rise .62s both cubic-bezier(.2,.7,.2,1);animation-delay:calc(.16s + var(--step)*.12s)}
+@keyframes journey-rise{from{opacity:.4;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media (max-width:1100px){.journey-panel{padding:28px 24px 22px}.journey-milestones{gap:8px}.journey-event{padding:15px 12px;min-height:245px}.journey-event p{font-size:10.5px}}
+@media (max-width:850px){
+  .journey-header{margin-bottom:28px}
+  .journey-track{padding-left:1px}
+  .journey-rail{left:12px;right:auto;top:14px;bottom:14px;width:2px;height:auto}
+  .journey-progress{width:100%;height:100%;transform-origin:center top}
+  .journey-enhanced .journey-progress{transform:scaleY(0)}
+  .journey-enhanced.journey-visible .journey-progress{transform:scaleY(1)}
+  .journey-milestones{grid-template-columns:1fr;gap:13px}
+  .journey-milestone{display:grid;grid-template-columns:26px 1fr;align-items:start;gap:22px}
+  .journey-dot{margin-top:19px}
+  .journey-dot::after{height:1px;width:17px;top:12px;left:calc(100% + 4px)}
+  .journey-event{min-height:unset;min-height:130px;margin-top:0;padding:18px 20px}
+  .journey-event h4{margin-top:11px}
+  .journey-type{padding-top:13px}
+  .journey-panel{border-radius:20px}
+}
+@media(max-width:520px){
+  .journey-panel{padding:22px 16px 18px}
+  .journey-header{align-items:start;gap:10px;margin-bottom:28px}
+  .journey-header h3{font-size:27px}
+  .journey-header p{font-size:11px}
+  .journey-aside{gap:5px}
+  .journey-aside-num{font-size:36px}
+  .journey-aside>span:last-child{font-size:7px}
+  .journey-milestone{gap:13px}
+  .journey-dot::after{width:9px}
+  .journey-event{padding:16px 14px}
+  .journey-event p{font-size:11px}
+  .journey-bottom{font-size:8px;letter-spacing:.07em}
+}
+@media(prefers-reduced-motion:reduce){.journey-enhanced .journey-progress{transform:none!important}.journey-event,.journey-dot::before{animation:none!important;transition:none!important}}

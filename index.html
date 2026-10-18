@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- Meta -->
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Marc Canlas is a frontend developer and UI/UX designer based in Angeles City, Philippines. Explore selected websites, interfaces, and case studies." />
+        <title>Marc Canlas — Frontend Developer &amp; UI/UX Designer</title>
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" sizes="64x64" href="img/assets/logo.png">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <script src="https://unpkg.com/lucide@latest"></script>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles/style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles/portfolio-finish.css" />
+        <link rel="stylesheet" href="styles/portfolio-polish.css" />
+    <link rel="stylesheet" href="styles/work-gallery.css" />
+    <link rel="stylesheet" href="styles/about-editorial.css" />
+    <link rel="stylesheet" href="styles/journal-editorial.css" />
+    <link rel="stylesheet" href="styles/testimonials-editorial.css" />
+    <link rel="stylesheet" href="styles/hero-spotlight.css" />
+    <link rel="stylesheet" href="styles/hero-intro.css" />
+      <link rel="stylesheet" href="styles/footer-compact.css" />
+    <link rel="stylesheet" href="styles/contact-delivery.css" />
+</head>
+
+    <body>
+        <div id="cursor"></div>
+        <div class="cursor-follower" id="follower"></div>
+
+        <div class="background-container">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+
+        <!-- ================= NAVBAR ================= -->
+        <header>
+            <nav class="navbar">
+                <div class="nav-container">
+
+                    <div class="logo">
+                        <a href="#home">
+                            <img src="img/assets/logo.png" alt="Marc Canlas Logo">
+                        </a>
+                    </div>
+
+                    <ul class="nav-links" id="nav-links">
+
+                        <li><a href="#home" class="nav-item active">
+                            <i class="fas fa-home"></i><span>Home</span>
+                        </a></li>
+
+                        <li><a href="#about-split" class="nav-item">
+                            <i class="fas fa-user"></i><span>About</span>
+                        </a></li>
+
+                        <li><a href="#portfolio" class="nav-item">
+                            <i class="fas fa-rocket"></i><span>Projects</span>
+                        </a></li>
+
+                        <li><a href="#blog" class="nav-item">
+                            <i class="fas fa-pen-nib"></i><span>Blog</span>
+                        </a></li>
+
+                        <li><a href="#contact" class="nav-item">
+                            <i class="fas fa-envelope"></i><span>Contact</span>
+                        </a></li>
+                    </ul>
+
+                    <button class="nav-cta" id="openModal">
+                        Let’s Connect
+                    </button>
+
+                    <!-- Hamburger -->
+                    <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                </div>
+            </nav>
+            <div class="mobile-overlay" id="mobile-overlay"></div>
+        </header>
+
+        <div class="modal-overlay" id="modal" role="presentation" aria-hidden="true" inert>
+            <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" tabindex="-1">
+                <button class="close-btn" id="closeModal" type="button" aria-label="Close project inquiry">&times;</button>
+
+                <p class="modal-kicker">LET’S COLLABORATE</p>
+                <h2 id="modalTitle">Project <em>inquiry.</em></h2>
+                <p class="modal-sub" id="modalDescription">
+                    Have a project in mind or want to collaborate? Tell me a little about it.
+                </p>
+
+                <form id="projectInquiryForm" action="https://formspree.io/f/mvzbdozl" method="POST" accept-charset="UTF-8">
+                    <div class="input-group">
+                        <input type="text" id="modal-name" name="name" placeholder=" " required autocomplete="name">
+                        <label for="modal-name">Your Name</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="modal-email" name="email" placeholder=" " required autocomplete="email">
+                        <label for="modal-email">Your Email</label>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="modal-company" name="company" placeholder=" " autocomplete="organization">
+                        <label for="modal-company">Company Name</label>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea id="modal-message" name="message" rows="4" placeholder=" " required></textarea>
+                        <label for="modal-message">Message</label>
+                    </div>
+
+                    <!-- modal -->
+                    <input type="hidden" name="_subject" value="Portfolio: project inquiry (modal)">
+                    <input type="hidden" name="source" value="Navigation project inquiry">
+                    <div class="spam-trap" aria-hidden="true"><label>Leave empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+
+                    <button type="submit" class="submit-btn" data-default-label="Send Message">Send Message <span aria-hidden="true">↗</span></button>
+                </form>
+
+                <p id="modalStatus" class="delivery-status" role="status" aria-live="polite" aria-atomic="true"></p>
+                <a id="modalEmailFallback" class="delivery-fallback" href="mailto:m4canlas@gmail.com" hidden>Open your email app instead <span aria-hidden="true">↗</span></a>
+            </div>
+        </div>
+
+        <!-- ================= HERO ================= -->
+        <main id="home" class="container">
+
+            <section class="content hero-intro" aria-labelledby="heroIntroHeading">
+                <div class="hero-intro__eyebrow">
+                    <span class="hero-intro__index">01 / INTRODUCTION</span>
+                    <span class="hero-intro__eyebrow-line" aria-hidden="true"></span>
+                </div>
+
+                <p class="hero-intro__role"><span class="hero-intro__status" aria-hidden="true"></span> Frontend Developer <span class="hero-intro__role-separator">/</span> UI/UX Designer</p>
+
+                <h1 id="heroIntroHeading" class="hero-intro__title">
+                    Hello, I'm <span>Marc.</span>
+                </h1>
+                <p class="hero-intro__statement">I design and build <em>for the web.</em></p>
+
+                <div class="hero-intro__copy">
+                    <p>I'm Marc Canlas, an IT student and frontend developer based in Angeles City. I enjoy taking an idea from its first rough layout to a working website.</p>
+                    <p>I care about the little things: clear navigation, responsive design, and interactions that feel natural. This portfolio is a collection of projects I've built and what I've learned along the way.</p>
+                </div>
+
+                <div class="hero-intro__actions">
+                    <a class="hero-intro__button hero-intro__button--primary" href="#portfolio">Explore my work <span class="hero-intro__arrow" aria-hidden="true">↗</span></a>
+                    <a class="hero-intro__button hero-intro__button--text" href="#about-split">More about me <span class="hero-intro__arrow" aria-hidden="true">→</span></a>
+                </div>
+
+                <div class="hero-intro__footnote">
+                    <div class="hero-intro__footnote-item"><span>BASED IN</span><strong>Angeles City, Philippines</strong></div>
+                    <div class="hero-intro__footnote-item"><span>WORKING WITH</span><strong>HTML · CSS · JS · Angular</strong></div>
+                    <nav class="hero-intro__socials" aria-label="Social profiles">
+                        <a class="hero-intro__github" href="https://github.com/TheCanlasArchive" target="_blank" rel="noopener noreferrer" aria-label="Visit my GitHub profile"><span>GitHub</span><span aria-hidden="true">↗</span></a>
+                        <a class="hero-intro__github" href="https://www.linkedin.com/in/marc-ordonez-canlas-a34320311/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile"><span>LinkedIn</span><span aria-hidden="true">↗</span></a>
+                    </nav>
+                </div>
+            </section>
+
+            <!-- Project spotlight: real site previews, seven case studies, keyboard controls -->
+            <section class="illustration hero-spotlight-wrap" aria-label="Selected projects">
+                <div class="hero-spotlight" id="heroSpotlight" role="region" aria-roledescription="carousel" aria-label="Featured project preview">
+                    <div class="hero-spotlight__eyebrow">
+                        <span><span class="hero-spotlight__status" aria-hidden="true"></span> THE PROJECT FILES</span>
+                        <span id="heroSlideCounter" class="hero-spotlight__counter">01 / 07</span>
+                    </div>
+
+                    <a class="hero-spotlight__visual" id="heroSlideVisual" href="projects/project-aningkabalen.html" aria-label="View Aning Kabalen case study">
+                        <div class="hero-spotlight__blur" id="heroSlideBlur" style="background-image:url('img/aningkabalen_img/home.png')" aria-hidden="true"></div>
+                        <img id="heroSlideImage" src="img/aningkabalen_img/home.png" alt="Screenshot of the Aning Kabalen marketplace website" decoding="async" fetchpriority="high">
+                        <span class="hero-spotlight__watermark" aria-hidden="true">SITE PREVIEW</span>
+                    </a>
+
+                    <div class="hero-spotlight__description" aria-live="off" id="heroSlideDetails">
+                        <div>
+                            <p class="hero-spotlight__category" id="heroSlideCategory">FULL-STACK WEB · 2026</p>
+                            <h3 id="heroSlideTitle">Aning Kabalen</h3>
+                            <p class="hero-spotlight__summary" id="heroSlideSummary">A digital marketplace connecting Pampanga farmers with local buyers.</p>
+                        </div>
+                        <a href="projects/project-aningkabalen.html" class="hero-spotlight__case-link" id="heroSlideLink" aria-label="View Aning Kabalen case study">Case study <span class="hero-spotlight__link-arrow" aria-hidden="true">↗</span></a>
+                    </div>
+
+                    <div class="hero-spotlight__footer">
+                        <div class="hero-spotlight__steps" aria-label="Select project">
+                            <button type="button" class="hero-spotlight__step is-active" data-hero-slide="0" aria-label="Show project 1: Aning Kabalen" aria-current="true"></button>
+                            <button type="button" class="hero-spotlight__step" data-hero-slide="1" aria-label="Show project 2: Aurumelle Pastries"></button>
+                            <button type="button" class="hero-spotlight__step" data-hero-slide="2" aria-label="Show project 3: Singku Inspired"></button>
+                            <button type="button" class="hero-spotlight__step" data-hero-slide="3" aria-label="Show project 4: Bossrich Photography"></button>
+                            <button type="button" class="hero-spotlight__step" data-hero-slide="4" aria-label="Show project 5: EarthHaven Organics"></button>
+                            <button type="button" class="hero-spotlight__step" data-hero-slide="5" aria-label="Show project 6: PanlasaTrip"></button>
+                            <button type="button" class="hero-spotlight__step" data-hero-slide="6" aria-label="Show project 7: PayaStreet"></button>
+                        </div>
+                        <div class="hero-spotlight__arrows">
+                            <button id="heroSlidePrev" type="button" aria-label="Previous project" title="Previous project"><span aria-hidden="true">←</span></button>
+                            <button id="heroSlideNext" type="button" aria-label="Next project" title="Next project"><span aria-hidden="true">→</span></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    <!-- ================= ABOUT / EDITORIAL INTRO ================= -->
+    <section id="about-split" class="about-section about-editorial" aria-labelledby="about-title">
+        <div class="about-editorial__inner">
+
+            <!-- The same section typography and rhythm used by Selected Work. -->
+            <header class="about-editorial__header">
+                <p class="about-editorial__eyebrow"><span class="about-editorial__line" aria-hidden="true"></span>02 / ABOUT<span class="about-editorial__line" aria-hidden="true"></span></p>
+                <h2 id="about-title">Behind the <em>work.</em></h2>
+                <p class="about-editorial__subtitle">The person, process, and perspective behind the interfaces I create.</p>
+            </header>
+
+            <div class="about-editorial__layout">
+                <aside class="about-editorial__identity" aria-label="Portrait and quick facts">
+                    <div class="about-editorial__photo-frame">
+                        <img src="img/assets/profile.png" alt="Portrait of Marc Canlas" class="about-editorial__portrait" loading="lazy" decoding="async">
+                        <div class="about-editorial__location"><i class="fas fa-location-dot" aria-hidden="true"></i> Angeles City, Philippines</div>
+                    </div>
+                    <div class="about-editorial__facts" aria-label="Quick facts">
+                        <div class="about-editorial__fact"><strong>07</strong><span>Projects<br>built</span></div>
+                        <div class="about-editorial__fact"><strong>04</strong><span>Certifications<br>earned</span></div>
+                        <div class="about-editorial__fact"><strong>3+</strong><span>Years learning<br>&amp; building</span></div>
+                    </div>
+                    <p class="about-editorial__photo-caption"><span>THE HUMAN SIDE OF THE WORK</span><span>01 — 01</span></p>
+                </aside>
+
+                <div class="about-editorial__content">
+                    <div class="about-editorial__story">
+                        <div class="about-editorial__overline"><span class="about-editorial__small-line" aria-hidden="true"></span> FRONTEND DEVELOPMENT &amp; UI/UX DESIGN</div>
+                        <h3>Thoughtful design.<br><em>Purposeful development.</em></h3>
+                        <div class="about-editorial__bio">
+                            <p>I'm Marc, a frontend developer and Information Technology student from Angeles City. I enjoy creating responsive, accessible websites where strong visual design and practical functionality come together.</p>
+                            <p>What I enjoy most is turning an idea into something people can actually use — from early layouts and Figma prototypes to carefully built interfaces. I pay attention to the details that make a difference: typography, spacing, clarity, and the way each interaction feels.</p>
+                            <p>My main focus is frontend development and UI/UX design. I also have experience working with backend technologies through my projects, which helps me understand how interfaces fit into a complete web application.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-editorial__expertise" aria-labelledby="about-skills-title">
+                        <div class="about-editorial__expertise-header">
+                            <h4 id="about-skills-title">What I work with</h4>
+                            <span>SKILLS / TOOLKIT</span>
+                        </div>
+                        <div class="about-editorial__skill-row">
+                            <div class="about-editorial__skill-heading"><span>01</span><strong>Frontend</strong></div>
+                            <div class="about-editorial__skill-tags">
+                                <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Angular</span><span>Vue.js</span>
+                            </div>
+                        </div>
+                        <div class="about-editorial__skill-row">
+                            <div class="about-editorial__skill-heading"><span>02</span><strong>Design &amp; tools</strong></div>
+                            <div class="about-editorial__skill-tags">
+                                <span>Figma</span><span>Git / GitHub</span><span>WordPress</span><span>Responsive Design</span><span>Canva</span>
+                            </div>
+                        </div>
+                        <div class="about-editorial__skill-row">
+                            <div class="about-editorial__skill-heading"><span>03</span><strong>Supporting tech</strong></div>
+                            <div class="about-editorial__skill-tags">
+                                <span>PHP</span><span>MySQL</span><span>MongoDB</span><span>Node.js</span><span>Express.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-editorial__actions">
+                        <a href="img/assets/marc_canlas_resume.pdf" class="about-editorial__button about-editorial__button--primary" download>
+                            Download resume <i class="fas fa-arrow-down-to-line" aria-hidden="true"></i>
+                        </a>
+                        <a href="profile.html" class="about-editorial__button about-editorial__button--secondary">
+                            More about me <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SELECTED WORK / EDITORIAL CARD GALLERY ================= -->
+    <section class="curated-work" id="portfolio" aria-labelledby="work-heading">
+        <div class="curated-work__inner">
+            <header class="curated-work__head">
+                <p class="curated-work__eyebrow"><span class="eyebrow-line"></span> 03 / PORTFOLIO <span class="eyebrow-line"></span></p>
+                <h2 id="work-heading">Selected <em>work.</em></h2>
+                <p class="curated-work__subtitle">A collection of websites and interfaces I've designed and developed.</p>
+            </header>
+            <div class="work-filter-bar" role="group" aria-label="Filter featured projects">
+                <button class="work-filter is-active" type="button" data-project-filter="all" aria-pressed="true">All Projects <span class="work-filter__count">07</span></button>
+                <button class="work-filter" type="button" data-project-filter="ecommerce" aria-pressed="false">E-commerce</button>
+                <button class="work-filter" type="button" data-project-filter="webapps" aria-pressed="false">Web Apps</button>
+                <button class="work-filter" type="button" data-project-filter="wordpress" aria-pressed="false">WordPress</button>
+                <button class="work-filter" type="button" data-project-filter="frontend" aria-pressed="false">Frontend</button>
+            </div>
+            <div class="work-gallery" id="featured-project-grid">
+<article class="work-card" data-category="Fullstack" data-tags="webapps ecommerce">
+        <div class="work-card__visual">
+            <a class="work-card__image" href="projects/project-aningkabalen.html" aria-label="Explore the Aning Kabalen case study">
+                <img class="work-card__image--aning" src="img/aningkabalen_img/home.png" alt="Screenshot of the Aning Kabalen website" loading="lazy" decoding="async">
+            </a>
+            <span class="work-card__category">Web application</span>
+            <span class="work-card__number">01</span>
+        </div>
+        <div class="work-card__content">
+            <div class="work-card__overline"><span>Digital marketplace</span><span>2026</span></div>
+            <h3><a href="projects/project-aningkabalen.html">Aning Kabalen</a></h3>
+            <p class="work-card__description">A marketplace bringing local farmers and buyers closer together across Pampanga.</p>
+            <p class="work-card__role"><i class="fa-regular fa-user" aria-hidden="true"></i>Frontend Developer · UI/UX Designer</p>
+            <div class="work-card__tech" aria-label="Technology stack"><span>Angular</span><span>Node.js</span><span>Express</span><span>MongoDB</span></div>
+            <div class="work-card__actions"><a class="work-card__link work-card__link--live" href="https://aningkabalen.site/home" target="_blank" rel="noopener noreferrer" aria-label="Open live website for Aning Kabalen"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg> Live site</a><a class="work-card__link work-card__link--detail" href="projects/project-aningkabalen.html" aria-label="Read Aning Kabalen case study">Case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+        </div>
+    </article>
+<article class="work-card" data-category="Fullstack" data-tags="ecommerce">
+        <div class="work-card__visual">
+            <a class="work-card__image" href="projects/project-aurumelle.html" aria-label="Explore the Aurumelle Pastries case study">
+                <img src="img/aurumelle_img/header.png" alt="Screenshot of the Aurumelle Pastries website" loading="lazy" decoding="async">
+            </a>
+            <span class="work-card__category">E-commerce</span>
+            <span class="work-card__number">02</span>
+        </div>
+        <div class="work-card__content">
+            <div class="work-card__overline"><span>Online pastry store</span><span>2024</span></div>
+            <h3><a href="projects/project-aurumelle.html">Aurumelle Pastries</a></h3>
+            <p class="work-card__description">An e-commerce experience for discovering pastries, placing orders, and managing a shop.</p>
+            <p class="work-card__role"><i class="fa-regular fa-user" aria-hidden="true"></i>Full-stack Developer</p>
+            <div class="work-card__tech" aria-label="Technology stack"><span>PHP</span><span>MySQL</span><span>HTML</span><span>CSS</span></div>
+            <div class="work-card__actions"><a class="work-card__link work-card__link--quiet" href="https://github.com/TheCanlasArchive/Aurumelle_Pastries_Project" target="_blank" rel="noopener noreferrer" aria-label="Source code for Aurumelle Pastries"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.11.76-.24.76-.54v-2.12c-3.09.68-3.74-1.31-3.74-1.31-.5-1.27-1.23-1.61-1.23-1.61-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.69 2.61 1.2 3.24.91.1-.72.39-1.2.71-1.48-2.47-.28-5.07-1.24-5.07-5.49 0-1.21.44-2.2 1.14-2.97-.12-.28-.49-1.41.1-2.94 0 0 .93-.3 3.05 1.14A10.6 10.6 0 0 1 12 6.03c.94 0 1.87.13 2.75.37 2.12-1.44 3.05-1.14 3.05-1.14.59 1.53.22 2.66.1 2.94.71.77 1.14 1.76 1.14 2.97 0 4.26-2.6 5.2-5.08 5.48.4.35.76 1.02.76 2.06v3.28c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg> Source</a><a class="work-card__link work-card__link--live" href="https://aurumelle-pastries.infinityfreeapp.com/login.php" target="_blank" rel="noopener noreferrer" aria-label="Open live website for Aurumelle Pastries"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg> Live site</a><a class="work-card__link work-card__link--detail" href="projects/project-aurumelle.html" aria-label="Read Aurumelle Pastries case study">Case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+        </div>
+    </article>
+<article class="work-card" data-category="Frontend" data-tags="frontend">
+        <div class="work-card__visual">
+            <a class="work-card__image" href="projects/project-singku.html" aria-label="Explore the Singku Inspired case study">
+                <img src="img/singku_img/header.png" alt="Screenshot of the Singku Inspired website" loading="lazy" decoding="async">
+            </a>
+            <span class="work-card__category">Brand website</span>
+            <span class="work-card__number">03</span>
+        </div>
+        <div class="work-card__content">
+            <div class="work-card__overline"><span>Café website</span><span>2025</span></div>
+            <h3><a href="projects/project-singku.html">Singku Inspired</a></h3>
+            <p class="work-card__description">A warm, responsive café experience with a considered menu and brand storytelling.</p>
+            <p class="work-card__role"><i class="fa-regular fa-user" aria-hidden="true"></i>Frontend Developer</p>
+            <div class="work-card__tech" aria-label="Technology stack"><span>HTML</span><span>CSS Grid</span><span>JavaScript</span></div>
+            <div class="work-card__actions"><a class="work-card__link work-card__link--quiet" href="https://github.com/TheCanlasArchive/Singku_Inspired_Cafe" target="_blank" rel="noopener noreferrer" aria-label="Source code for Singku Inspired"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.11.76-.24.76-.54v-2.12c-3.09.68-3.74-1.31-3.74-1.31-.5-1.27-1.23-1.61-1.23-1.61-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.69 2.61 1.2 3.24.91.1-.72.39-1.2.71-1.48-2.47-.28-5.07-1.24-5.07-5.49 0-1.21.44-2.2 1.14-2.97-.12-.28-.49-1.41.1-2.94 0 0 .93-.3 3.05 1.14A10.6 10.6 0 0 1 12 6.03c.94 0 1.87.13 2.75.37 2.12-1.44 3.05-1.14 3.05-1.14.59 1.53.22 2.66.1 2.94.71.77 1.14 1.76 1.14 2.97 0 4.26-2.6 5.2-5.08 5.48.4.35.76 1.02.76 2.06v3.28c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg> Source</a><a class="work-card__link work-card__link--live" href="https://marc-wd.github.io/MidtermProj_Major-Pages/#home" target="_blank" rel="noopener noreferrer" aria-label="Open live website for Singku Inspired"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg> Live site</a><a class="work-card__link work-card__link--detail" href="projects/project-singku.html" aria-label="Read Singku Inspired case study">Case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+        </div>
+    </article>
+<article class="work-card" data-category="Frontend" data-tags="webapps frontend">
+        <div class="work-card__visual">
+            <a class="work-card__image" href="projects/project-earthhaven.html" aria-label="Explore the EarthHaven Organics case study">
+                <img src="img/earthhaven_img/earthhaven_organics.png" alt="Screenshot of the EarthHaven Organics website" loading="lazy" decoding="async">
+            </a>
+            <span class="work-card__category">Web application</span>
+            <span class="work-card__number">04</span>
+        </div>
+        <div class="work-card__content">
+            <div class="work-card__overline"><span>Product catalogue</span><span>2025</span></div>
+            <h3><a href="projects/project-earthhaven.html">EarthHaven Organics</a></h3>
+            <p class="work-card__description">An Angular product catalogue designed for clear browsing and organic product discovery.</p>
+            <p class="work-card__role"><i class="fa-regular fa-user" aria-hidden="true"></i>Frontend Developer</p>
+            <div class="work-card__tech" aria-label="Technology stack"><span>Angular</span><span>Bootstrap</span></div>
+            <div class="work-card__actions"><a class="work-card__link work-card__link--quiet" href="https://github.com/TheCanlasArchive/EarthHaven_Organics" target="_blank" rel="noopener noreferrer" aria-label="Source code for EarthHaven Organics"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.11.76-.24.76-.54v-2.12c-3.09.68-3.74-1.31-3.74-1.31-.5-1.27-1.23-1.61-1.23-1.61-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.69 2.61 1.2 3.24.91.1-.72.39-1.2.71-1.48-2.47-.28-5.07-1.24-5.07-5.49 0-1.21.44-2.2 1.14-2.97-.12-.28-.49-1.41.1-2.94 0 0 .93-.3 3.05 1.14A10.6 10.6 0 0 1 12 6.03c.94 0 1.87.13 2.75.37 2.12-1.44 3.05-1.14 3.05-1.14.59 1.53.22 2.66.1 2.94.71.77 1.14 1.76 1.14 2.97 0 4.26-2.6 5.2-5.08 5.48.4.35.76 1.02.76 2.06v3.28c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg> Source</a><a class="work-card__link work-card__link--live" href="https://earthhaven-organics.netlify.app/home" target="_blank" rel="noopener noreferrer" aria-label="Open live website for EarthHaven Organics"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg> Live site</a><a class="work-card__link work-card__link--detail" href="projects/project-earthhaven.html" aria-label="Read EarthHaven Organics case study">Case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+        </div>
+    </article>
+<article class="work-card" data-category="WordPress" data-tags="wordpress">
+        <div class="work-card__visual">
+            <a class="work-card__image" href="projects/project-bossrich.html" aria-label="Explore the Bossrich Photography case study">
+                <img class="work-card__image--contain" src="img/bossrich_img/bossrich.png" alt="Screenshot of the Bossrich Photography website" loading="lazy" decoding="async">
+            </a>
+            <span class="work-card__category">Portfolio website</span>
+            <span class="work-card__number">05</span>
+        </div>
+        <div class="work-card__content">
+            <div class="work-card__overline"><span>Photographer portfolio</span><span>2026</span></div>
+            <h3><a href="projects/project-bossrich.html">Bossrich Photography</a></h3>
+            <p class="work-card__description">A photography portfolio shaped around strong imagery, brand identity, and discoverability.</p>
+            <p class="work-card__role"><i class="fa-regular fa-user" aria-hidden="true"></i>Frontend Developer · UI/UX Designer</p>
+            <div class="work-card__tech" aria-label="Technology stack"><span>WordPress</span><span>SEO</span></div>
+            <div class="work-card__actions"><a class="work-card__link work-card__link--live" href="https://bossrichphoto.pro/" target="_blank" rel="noopener noreferrer" aria-label="Open live website for Bossrich Photography"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg> Live site</a><a class="work-card__link work-card__link--detail" href="projects/project-bossrich.html" aria-label="Read Bossrich Photography case study">Case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+        </div>
+    </article>
+<article class="work-card" data-category="Frontend" data-tags="frontend">
+        <div class="work-card__visual">
+            <a class="work-card__image" href="projects/project-payastreet.html" aria-label="Explore the PayaStreet case study">
+                <img src="img/payastreet_img/payastreet.png" alt="Screenshot of the PayaStreet website" loading="lazy" decoding="async">
+            </a>
+            <span class="work-card__category">Brand website</span>
+            <span class="work-card__number">06</span>
+        </div>
+        <div class="work-card__content">
+            <div class="work-card__overline"><span>Food &amp; beverage website</span><span>2025</span></div>
+            <h3><a href="projects/project-payastreet.html">PayaStreet</a></h3>
+            <p class="work-card__description">A welcoming digital storefront for a local drinks brand, built with a team.</p>
+            <p class="work-card__role"><i class="fa-regular fa-user" aria-hidden="true"></i>Frontend Developer</p>
+            <div class="work-card__tech" aria-label="Technology stack"><span>HTML</span><span>CSS</span><span>Node.js</span></div>
+            <div class="work-card__actions"><a class="work-card__link work-card__link--quiet" href="https://github.com/sammyvie/Paya-Street_Website-" target="_blank" rel="noopener noreferrer" aria-label="Source code for PayaStreet"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.11.76-.24.76-.54v-2.12c-3.09.68-3.74-1.31-3.74-1.31-.5-1.27-1.23-1.61-1.23-1.61-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.69 2.61 1.2 3.24.91.1-.72.39-1.2.71-1.48-2.47-.28-5.07-1.24-5.07-5.49 0-1.21.44-2.2 1.14-2.97-.12-.28-.49-1.41.1-2.94 0 0 .93-.3 3.05 1.14A10.6 10.6 0 0 1 12 6.03c.94 0 1.87.13 2.75.37 2.12-1.44 3.05-1.14 3.05-1.14.59 1.53.22 2.66.1 2.94.71.77 1.14 1.76 1.14 2.97 0 4.26-2.6 5.2-5.08 5.48.4.35.76 1.02.76 2.06v3.28c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg> Source</a><a class="work-card__link work-card__link--live" href="https://paya-street-website.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Open live website for PayaStreet"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg> Live site</a><a class="work-card__link work-card__link--detail" href="projects/project-payastreet.html" aria-label="Read PayaStreet case study">Case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+        </div>
+    </article>
+<article class="work-card" data-category="WordPress" data-tags="wordpress">
+        <div class="work-card__visual">
+            <a class="work-card__image" href="projects/project-panlasa.html" aria-label="Explore the PanlasaTrip case study">
+                <img class="work-card__image--contain" src="img/panlasa_trip/header.png" alt="Screenshot of the PanlasaTrip website" loading="lazy" decoding="async">
+            </a>
+            <span class="work-card__category">Blog &amp; publishing</span>
+            <span class="work-card__number">07</span>
+        </div>
+        <div class="work-card__content">
+            <div class="work-card__overline"><span>Food blog</span><span>2023</span></div>
+            <h3><a href="projects/project-panlasa.html">PanlasaTrip</a></h3>
+            <p class="work-card__description">A WordPress publishing project exploring food stories and a straightforward reading experience.</p>
+            <p class="work-card__role"><i class="fa-regular fa-user" aria-hidden="true"></i>WordPress Developer · Content Strategist</p>
+            <div class="work-card__tech" aria-label="Technology stack"><span>WordPress</span></div>
+            <div class="work-card__actions"><a class="work-card__link work-card__link--live" href="https://panlasatrip.wordpress.com/" target="_blank" rel="noopener noreferrer" aria-label="Open live website for PanlasaTrip"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg> Live site</a><a class="work-card__link work-card__link--detail" href="projects/project-panlasa.html" aria-label="Read PanlasaTrip case study">Case study <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+        </div>
+    </article>
+            </div>
+            <div class="work-browser__footer" aria-label="Project pagination">
+                <p class="work-browser__status" data-page-info role="status" aria-live="polite">Showing 1–6 of 7 projects</p>
+                <div class="work-browser__nav">
+                    <button class="work-page-btn" type="button" data-page-direction="prev" disabled aria-label="Previous projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Previous</button>
+                    <span class="work-browser__page" data-page-count>01 / 02</span>
+                    <button class="work-page-btn" type="button" data-page-direction="next" aria-label="Next projects">Next <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+                </div>
+                <a class="work-browser__all" href="projects.html">View all projects <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+            </div>
+        </div>
+    </section>
+
+        <!-- ================= JOURNAL / LATEST WRITING ================= -->
+        <section class="blog-manifest journal-editorial" id="blog" aria-labelledby="journal-title">
+            <div class="blog-manifest-container journal-editorial__inner">
+                <header class="journal-editorial__header">
+                    <p class="journal-editorial__eyebrow">
+                        <span class="journal-editorial__line" aria-hidden="true"></span>
+                        04 / JOURNAL
+                        <span class="journal-editorial__line" aria-hidden="true"></span>
+                    </p>
+                    <h2 id="journal-title">Latest <em>writing.</em></h2>
+                    <p class="journal-editorial__subtitle">A few thoughts on learning, building for the web, and finding my own approach to design.</p>
+                </header>
+
+                <div class="journal-editorial__grid" aria-label="Latest blog entries">
+                    <article class="journal-entry">
+                        <div class="journal-entry__masthead">
+                            <span class="journal-entry__index">01 <span>/ ARTICLE</span></span>
+                            <time class="journal-entry__date" datetime="2026-05">May 2026</time>
+                        </div>
+                        <div class="journal-entry__body">
+                            <p class="journal-entry__topic"><span class="journal-entry__topic-mark" aria-hidden="true"></span> DEVELOPMENT · PERSONAL</p>
+                            <h3><a href="blog/blog-my-journey.html">My Journey as an IT Web Developer</a></h3>
+                            <p class="journal-entry__excerpt">From a boarding house room and a blank Python file to building full websites — how my journey started in 2023, and what I've learned along the way.</p>
+                        </div>
+                        <div class="journal-entry__foot">
+                            <span class="journal-entry__series">FIELD NOTE 01</span>
+                            <a href="blog/blog-my-journey.html" class="journal-entry__link" aria-label="Read My Journey as an IT Web Developer">Read article <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+                        </div>
+                    </article>
+                    <article class="journal-entry">
+                        <div class="journal-entry__masthead">
+                            <span class="journal-entry__index">02 <span>/ ARTICLE</span></span>
+                            <time class="journal-entry__date" datetime="2026-05">May 2026</time>
+                        </div>
+                        <div class="journal-entry__body">
+                            <p class="journal-entry__topic"><span class="journal-entry__topic-mark" aria-hidden="true"></span> UI/UX · CREATIVE PROCESS</p>
+                            <h3><a href="blog/blog-design-process.html">The Way I Design: Picky, Patient, and Always Revising</a></h3>
+                            <p class="journal-entry__excerpt">Looking for the right reference, refining every detail, and making plenty of revisions — a closer look at how my design process has evolved.</p>
+                        </div>
+                        <div class="journal-entry__foot">
+                            <span class="journal-entry__series">FIELD NOTE 02</span>
+                            <a href="blog/blog-design-process.html" class="journal-entry__link" aria-label="Read The Way I Design">Read article <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="journal-editorial__footer">
+                    <p><span>02</span> published stories <span class="journal-editorial__footer-dot" aria-hidden="true">·</span> more to come</p>
+                    <a href="blog.html">Explore all writing <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= TESTIMONIALS / 05 ================= -->
+        <section class="testimonials-editorial" id="testimonials" aria-labelledby="testimonials-title">
+            <div class="testimonials-editorial__inner">
+                <div class="testimonials-editorial__masthead">
+                    <div class="testimonials-editorial__intro">
+                        <p class="testimonials-editorial__eyebrow"><span class="testimonials-editorial__line" aria-hidden="true"></span> 05 / TESTIMONIALS</p>
+                        <h2 id="testimonials-title">Building <em>together.</em></h2>
+                        <p class="testimonials-editorial__subtitle">A few words from teammates and collaborators I've worked with.</p>
+                    </div>
+                    <div class="testimonials-editorial__browse" aria-label="Browse testimonials">
+                        <span class="testimonials-editorial__count">06 NOTES</span>
+                        <button class="testimonials-editorial__arrow" id="testimonials-prev" type="button" aria-label="Previous testimonials" disabled><span aria-hidden="true">←</span></button>
+                        <span class="testimonials-editorial__page" id="testimonials-page" aria-live="polite" aria-atomic="true">01 / 02</span>
+                        <button class="testimonials-editorial__arrow" id="testimonials-next" type="button" aria-label="Next testimonials"><span aria-hidden="true">→</span></button>
+                    </div>
+                </div>
+                <div class="testimonials-editorial__grid" id="testimonials-grid" aria-label="Testimonials">
+                    <article class="endorsement-card" aria-label="Testimonial from Samantha Wayne Gonzales">
+                        <div class="endorsement-card__top">
+                            <span class="endorsement-card__number">01 <span>/ NOTE</span></span>
+                            <span class="endorsement-card__stars" aria-label="5 out of 5 stars">★★★★★</span>
+                        </div>
+                        <blockquote class="endorsement-card__quote">Marc builds clean, functional code. His work on the Paya Street engine shows he can handle the full lifecycle of a web app, from server setup to UI.</blockquote>
+                        <div class="endorsement-card__person">
+                            <span class="endorsement-card__avatar" aria-hidden="true">SG</span>
+                            <span class="endorsement-card__person-info">
+                                <strong>Samantha Wayne Gonzales</strong>
+                                <span>Fellow Collaborator</span>
+                            </span>
+                        </div>
+                    </article>
+                    <article class="endorsement-card" aria-label="Testimonial from Aimee Pangan">
+                        <div class="endorsement-card__top">
+                            <span class="endorsement-card__number">02 <span>/ NOTE</span></span>
+                            <span class="endorsement-card__stars" aria-label="5 out of 5 stars">★★★★★</span>
+                        </div>
+                        <blockquote class="endorsement-card__quote">Effectively customized WordPress to create a structured, content-heavy photography blog. Marc showed a clear understanding of content taxonomy, SEO, and organized media delivery.</blockquote>
+                        <div class="endorsement-card__person">
+                            <span class="endorsement-card__avatar" aria-hidden="true">AM</span>
+                            <span class="endorsement-card__person-info">
+                                <strong>Aimee Pangan</strong>
+                                <span>Fellow Team Member</span>
+                            </span>
+                        </div>
+                    </article>
+                    <article class="endorsement-card" aria-label="Testimonial from Joyze Magat">
+                        <div class="endorsement-card__top">
+                            <span class="endorsement-card__number">03 <span>/ NOTE</span></span>
+                            <span class="endorsement-card__stars" aria-label="5 out of 5 stars">★★★★★</span>
+                        </div>
+                        <blockquote class="endorsement-card__quote">Expertly handled the CMS architecture to organize a large volume of culinary content. Marc’s implementation of custom taxonomies and SEO-friendly structures makes the platform both easy to manage and easy to find.</blockquote>
+                        <div class="endorsement-card__person">
+                            <span class="endorsement-card__avatar" aria-hidden="true">JL</span>
+                            <span class="endorsement-card__person-info">
+                                <strong>Joyze Magat</strong>
+                                <span>Fellow Team Member</span>
+                            </span>
+                        </div>
+                    </article>
+                    <article class="endorsement-card" aria-label="Testimonial from Joemar Catipon">
+                        <div class="endorsement-card__top">
+                            <span class="endorsement-card__number">04 <span>/ NOTE</span></span>
+                            <span class="endorsement-card__stars" aria-label="5 out of 5 stars">★★★★★</span>
+                        </div>
+                        <blockquote class="endorsement-card__quote">Marc shows a strong grasp of modern framework logic. His work with Angular goes beyond just visuals; he implements clean component structures and ensures everything is stable with unit testing.</blockquote>
+                        <div class="endorsement-card__person">
+                            <span class="endorsement-card__avatar" aria-hidden="true">MT</span>
+                            <span class="endorsement-card__person-info">
+                                <strong>Joemar Catipon</strong>
+                                <span>Project Collaborator</span>
+                            </span>
+                        </div>
+                    </article>
+                    <article class="endorsement-card" aria-label="Testimonial from James Jethro Dizon">
+                        <div class="endorsement-card__top">
+                            <span class="endorsement-card__number">05 <span>/ NOTE</span></span>
+                            <span class="endorsement-card__stars" aria-label="5 out of 5 stars">★★★★★</span>
+                        </div>
+                        <blockquote class="endorsement-card__quote">Marc is a focused developer who delivers. He understands the technical requirements of an e-commerce site, like order tracking and database management.</blockquote>
+                        <div class="endorsement-card__person">
+                            <span class="endorsement-card__avatar" aria-hidden="true">JJ</span>
+                            <span class="endorsement-card__person-info">
+                                <strong>James Jethro Dizon</strong>
+                                <span>Team Member</span>
+                            </span>
+                        </div>
+                    </article>
+                    <article class="endorsement-card" aria-label="Testimonial from Gab Gaerlan">
+                        <div class="endorsement-card__top">
+                            <span class="endorsement-card__number">06 <span>/ NOTE</span></span>
+                            <span class="endorsement-card__stars" aria-label="5 out of 5 stars">★★★★★</span>
+                        </div>
+                        <blockquote class="endorsement-card__quote">The focus was on a simple, effective shopping experience. Marc implemented a smooth ordering flow and a clean UI that represents the brand perfectly without overcomplicating things.</blockquote>
+                        <div class="endorsement-card__person">
+                            <span class="endorsement-card__avatar" aria-hidden="true">GG</span>
+                            <span class="endorsement-card__person-info">
+                                <strong>Gab Gaerlan</strong>
+                                <span>Team Member</span>
+                            </span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- ================= CONTACT SECTION ================= -->
+        <section id="contact" class="contact-hub">
+            <div class="contact-ambient"></div>
+            <div class="contact-shell">
+                <div class="contact-panel contact-panel--intro">
+                    <div class="contact-panel__kicker">
+                        <span class="eyebrow-line"></span>
+                        06 / CONTACT
+                    </div>
+                    <h2 class="contact-panel__title">Let’s build <span class="contact-panel__title-accent">something thoughtful.</span></h2>
+                    <p class="contact-panel__desc">If you’re planning a website, refining a user interface, or looking for a frontend-focused collaborator, feel free to reach out. I’m open to freelance work, portfolio collaborations, and project conversations.</p>
+
+                    <div class="contact-quick-grid">
+                        <div class="contact-quick-card">
+                            <span class="contact-quick-card__icon"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.6"/></svg></span>
+                            <div>
+                                <p class="contact-quick-card__label">Based in</p>
+                                <p class="contact-quick-card__value">Angeles City, Philippines</p>
+                            </div>
+                        </div>
+                        <div class="contact-quick-card contact-quick-card--clickable" onclick="copyEmail()" style="cursor:pointer;" title="Click to copy email">
+                            <span class="contact-quick-card__icon"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+                            <div>
+                                <p class="contact-quick-card__label">Email</p>
+                                <p class="contact-quick-card__value" id="email-text">m4canlas@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-quick-card">
+                            <span class="contact-quick-card__icon"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+                            <div>
+                                <p class="contact-quick-card__label">Availability</p>
+                                <p class="contact-quick-card__value">Open for projects & collaborations</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-panel contact-panel--form">
+                    <div class="contact-form__header">
+                        <div>
+                            <p class="contact-form__eyebrow">Project inquiry</p>
+                            <h3 class="contact-form__title">Tell me about your idea</h3>
+                        </div>
+                        <p class="contact-form__meta">I’ll respond as soon as I can.</p>
+                    </div>
+
+                    <form id="contactFormMain" class="pro-form" action="https://formspree.io/f/xjgejvbk" method="POST" accept-charset="UTF-8">
+                        <input type="hidden" name="_subject" value="Portfolio: new contact request">
+                        <input type="hidden" name="source" value="Homepage contact section">
+                        <div class="spam-trap" aria-hidden="true"><label>Leave empty<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
+                        <div class="form-row">
+                            <div class="field-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your name" required>
+                            </div>
+                            <div class="field-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="service">Interested In</label>
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected>Select a service...</option>
+                                <option>UI/UX Design</option>
+                                <option>Frontend Engineering</option>
+                                <option>Full-Stack Project</option>
+                                <option>Web Performance</option>
+                                <option>Technical Consultation</option>
+                            </select>
+                        </div>
+
+                        <div class="field-group">
+                            <label for="message">Project Brief</label>
+                            <textarea id="message" name="message" placeholder="Share a quick overview of your project, goals, or the kind of help you need." rows="6" required></textarea>
+                        </div>
+
+                        <div class="form-footer-row">
+                            <button type="submit" class="pro-submit" data-default-label="Send Request">
+                                Send Request <i class="fa-solid fa-arrow-right-long"></i>
+                            </button>
+                            <div class="contact-form__feedback">
+                                <p id="formStatus" class="form-status-msg delivery-status" role="status" aria-live="polite" aria-atomic="true">Prefer email? You can also reach me directly at m4canlas@gmail.com.</p>
+                                <a id="contactEmailFallback" class="delivery-fallback" href="mailto:m4canlas@gmail.com" hidden>Open your email app instead <span aria-hidden="true">↗</span></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FOOTER ================= -->
+        <footer class="footer-section site-footer" id="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__main">
+        <div class="site-footer__message">
+          <div class="site-footer__eyebrow">Available for new projects</div>
+          <h2 class="site-footer__heading">Have an idea? <em>Let's make it real.</em></h2>
+        </div>
+        <div class="site-footer__contact">
+          <p class="site-footer__intro">A website, an interface, or simply a conversation. I'd love to hear what you're working on.</p>
+          <a class="site-footer__email" href="mailto:m4canlas@gmail.com" aria-label="Email Marc at m4canlas@gmail.com">
+            <span>m4canlas@gmail.com</span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="site-footer__base">
+        <a class="site-footer__brand" href="#home" aria-label="Marc Canlas — back to home"><span class="site-footer__monogram">MC</span><span class="site-footer__name">Marc Canlas</span></a>
+        <nav class="site-footer__links" aria-label="Footer navigation">
+          <a href="#home">Home</a><a href="#about-split">About</a><a href="#portfolio">Projects</a><a href="#blog">Blog</a><a href="#contact">Contact</a>
+        </nav>
+        <div class="site-footer__social" aria-label="Social profiles">
+          <a href="https://github.com/TheCanlasArchive" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.11.76-.24.76-.54v-2.12c-3.09.68-3.74-1.31-3.74-1.31-.5-1.27-1.23-1.61-1.23-1.61-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.69 2.61 1.2 3.24.91.1-.72.39-1.2.71-1.48-2.47-.28-5.07-1.24-5.07-5.49 0-1.21.44-2.2 1.14-2.97-.12-.28-.49-1.41.1-2.94 0 0 .93-.3 3.05 1.14A10.6 10.6 0 0 1 12 6.03c.94 0 1.87.13 2.75.37 2.12-1.44 3.05-1.14 3.05-1.14.59 1.53.22 2.66.1 2.94.71.77 1.14 1.76 1.14 2.97 0 4.26-2.6 5.2-5.08 5.48.4.35.76 1.02.76 2.06v3.28c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg></a>
+          <a href="https://www.linkedin.com/in/marc-ordonez-canlas-a34320311/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20.45 2H3.55C2.7 2 2 2.67 2 3.5v17c0 .83.7 1.5 1.55 1.5h16.9c.86 0 1.55-.67 1.55-1.5v-17c0-.83-.69-1.5-1.55-1.5ZM8 18.75H5V9h3v9.75ZM6.5 7.65a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44Zm12.25 11.1h-3V14c0-1.14-.02-2.61-1.59-2.61-1.59 0-1.83 1.25-1.83 2.53v4.83h-3V9h2.88v1.33h.04c.4-.76 1.38-1.56 2.85-1.56 3.05 0 3.65 2.01 3.65 4.62v5.36Z"/></svg></a>
+          <a href="https://www.facebook.com/marcordonez.canlas.906" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07a10.06 10.06 0 0 0 8.44 9.96v-7.08H7.9v-2.88h2.54V9.94c0-2.51 1.5-3.9 3.79-3.9 1.1 0 2.25.2 2.25.2v2.49h-1.27c-1.25 0-1.64.78-1.64 1.57v1.88h2.79l-.45 2.88h-2.34v7.08A10.06 10.06 0 0 0 22 12.07Z"/></svg></a>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <p>© 2026 Marc O. Canlas</p>
+        <p>Designed and built in <span>Angeles City, Philippines.</span></p>
+      </div>
+    </div>
+    <a href="#home" class="scroll-top" id="scrollTopBtn" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+  </footer>
+        <script src="js/script.js"></script>
+        <script defer src="js/hero-spotlight.js"></script>
+    <script defer src="js/work-gallery.js"></script>
+    <script defer src="js/testimonials-editorial.js"></script>
+
+    </body>
+</html>

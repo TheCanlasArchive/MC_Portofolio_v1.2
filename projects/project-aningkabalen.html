@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="64x64" href="../img/assets/logo.png">
+    <title>Singku Inspired | Professional Case Study</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="../styles/project.css" />
+
+</head>
+<body>
+
+    <div class="bg-mesh"></div>
+    <div class="bg-grid"></div>
+
+    <div id="cursor"></div>
+    <div class="cursor-follower" id="follower"></div>
+
+    <nav>
+        <div class="container" style="display:flex; justify-content:space-between; width:100%;">
+            <a href="#" class="back-btn" onclick="window.history.back()">
+                <i data-lucide="chevron-left"></i>
+                CASE STUDIES_7
+            </a>
+            <div class="pill" style="border-color: var(--accent)">Aning_Kabalen</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="hero" id="hero">
+            <span class="badge">Development & Architecture</span>
+            <h1>AningKabalen:<span style="color:var(--accent)"> A Farm to Table Ledger</span></h1>
+        </header>
+
+        <div class="content-layout">
+            <main class="main-content">
+                <div class="reveal featured-image">
+                    <img src="../img/aningkabalen_img/login.png" alt="AningKabalen Login Interface">
+                    <img src="../img/aningkabalen_img/home.png" alt="AningKabalen Home Interface">
+                    <img src="../img/aningkabalen_img/products.png" alt="AningKabalen Products Interface">
+                    <img src="../img/aningkabalen_img/product_details.png" alt="AningKabalen Product Details Interface">
+                    <img src="../img/aningkabalen_img/farmer_page.png" alt="AningKabalen Farmer Page Interface">
+                </div>
+
+                <section class="reveal card">
+                    <div class="card-title">
+                        <i data-lucide="terminal"></i>
+                        <h3>The Objective</h3>
+                    </div>
+                    <p style="margin-bottom: 20px;">
+                        AningKabalen is an Angular-based web application developed to address the fragmented agricultural supply chain of Pampanga — the Culinary Capital of the Philippines. Despite the province's booming food scene, small farmers from municipalities like Candaba and San Luis remain economically vulnerable due to middlemen who exploit the information asymmetry between producers and buyers.
+                    </p>
+                    <p style="margin-bottom: 20px;">
+                        The platform creates a transparent, real-time marketplace that connects verified Kapampangan farmers directly to consumers and the HORECA industry — Hotels, Restaurants, and Cafés — eliminating the middlemen entirely and empowering both sides of the supply chain.
+                    </p>
+                </section>
+
+                <section class="reveal card">
+                    <div class="card-title">
+                        <i data-lucide="code-2"></i>
+                        <h3>Frontend Architecture</h3>
+                    </div>
+                    <div class="feature-list">
+                        <div class="feature-card">
+                            <i data-lucide="coffee" size="24"></i>
+                            <h4>Identity Access</h4>
+                            <p style="font-size:0.85rem">JWT-based authentication with role-specific access for Admin, Farmer, and Buyer. Passwords hashed with bcryptjs. Farmer accounts require Admin verification before going live.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <i data-lucide="tablet-smartphone" size="24"></i>
+                            <h4>Live Harvest Feed</h4>
+                            <p style="font-size:0.85rem">Reactive Angular data binding pushes real-time inventory updates the moment a farmer posts a harvest — no page refresh needed. Built for the HORECA market's demand for predictable supply.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <i data-lucide="zap" size="24"></i>
+                            <h4>Direct Ordering</h4>
+                            <p style="font-size:0.85rem">Cart-based checkout that deducts stock immediately upon order placement, notifies the farmer, and tracks the full delivery lifecycle from address input to completion.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <i data-lucide="cpu" size="24"></i>
+                            <h4>Pledge & Reserve</h4>
+                            <p style="font-size:0.85rem">Buyers pre-book upcoming harvests before the season starts. The farmer confirms within 48 hours — a digital handshake that gives farmers the financial confidence to plant, knowing the crop is already spoken for.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <aside class="sidebar">
+                <div class="button-group" style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="https://aningkabalen.site/home?fbclid=IwY2xjawSTDixleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEe71GK2rXHZhZAlo882SFucF3VKtYtu_qteN-OYHtitaKR5X8LVRilpPhlhVo_aem_G1CS8FaMY0CwuiqG0RxdTQ" target="_blank" class="reveal btn-launch">
+                        VISIT PROJECT
+                        <i data-lucide="external-link" size="18"></i>
+                    </a>
+                    
+
+                </div>
+
+                <div class="reveal meta-box">
+                    <div class="meta-item">
+                        <div class="meta-label">Project Role</div>
+                        <div class="meta-value">Lead Frontend Developer</div>
+                        <span style="display: block; font-size: 0.85em; opacity: 0.6; margin-top: 4px; font-weight: 400;">
+                            Team: [Marc Canlas], [Joemar Catipon], [Aimee Pangan/ Team Leader],[Wilson Yaochingco]
+                        </span>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Industry</div>
+                        <div class="meta-value">AgriTech / Farm-to-Table Marketplace</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Technologies</div>
+                        <div class="pill-group">
+                            <span class="pill">Angular</span>
+                            <span class="pill">Express.js</span>
+                            <span class="pill">MongoDB</span>
+                            <span class="pill">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer style="padding: 100px 0; text-align: center; opacity: 0.4; font-size: 0.8rem;">
+        &copy; 2026  AningKabalen Case Study. All Rights Reserved.
+    </footer>
+
+    <script src="../js/project.js"></script>
+
+</body>
+</html>

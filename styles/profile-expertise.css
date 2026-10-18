@@ -1,0 +1,43 @@
+/* Profile bento refinements — capabilities, traits and technologies. */
+.pf-card-lead{margin:-5px 0 22px;max-width:52ch;color:#b4a4ca;font-size:12px;line-height:1.75}
+.pf-traits-card,.pf-expertise-card{display:flex;flex-direction:column}
+.pf-traits-card{background:linear-gradient(150deg,rgba(39,19,67,.94),rgba(19,10,37,.96))}
+.pf-expertise-card{background:linear-gradient(133deg,rgba(31,15,53,.95),rgba(19,9,36,.95))}
+.pf-traits-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:auto}
+.pf-trait{padding:14px 13px 13px;min-width:0;border-radius:13px;border:1px solid rgba(196,160,255,.12);background:rgba(152,98,231,.06);transition:background .2s,border-color .2s,transform .2s}
+.pf-trait:hover{background:rgba(151,103,226,.13);border-color:rgba(198,169,255,.33);transform:translateY(-2px)}
+.pf-trait-num{display:block;font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-size:19px;line-height:1;color:#bda4fc;margin-bottom:9px}
+.pf-trait strong{display:block;font-weight:700;font-size:12px;letter-spacing:-.02em;color:#f5edff}
+.pf-trait p{font-size:10px;line-height:1.6;color:#aa9aba;margin:6px 0 0}
+.pf-expertise-list{margin-top:auto;border-top:1px solid var(--pf-line)}
+.pf-expertise-row{display:grid;grid-template-columns:30px minmax(0,1fr) 16px;gap:12px;padding:17px 0;border-bottom:1px solid var(--pf-line);align-items:start}
+.pf-expertise-row:last-child{border-bottom:none;padding-bottom:1px}
+.pf-expertise-index{color:#bc9ffa;font-size:10px;font-weight:800;letter-spacing:.06em;margin-top:3px}
+.pf-expertise-row strong{font-size:12px;font-weight:700;color:#f9f4ff}
+.pf-expertise-row p{margin:5px 0 0;font-size:11px;line-height:1.68;color:#ada0c0;max-width:54ch}
+.pf-expertise-mark{color:#755b94;font-size:14px;transition:color .25s,transform .25s}
+.pf-expertise-row:hover .pf-expertise-mark{color:#cfb9ff;transform:translate(2px,-2px)}
+.pf-circle-icon{font-size:24px}
+.pf-technology-card{background:linear-gradient(118deg,rgba(35,17,61,.96),rgba(25,12,45,.96))}
+.pf-technology-head{align-items:center;margin-bottom:20px}
+.pf-technology-note{letter-spacing:.1em;color:#a68dca;font-size:9px;font-weight:750;white-space:nowrap}
+.pf-stack-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.pf-stack-group{min-width:0;padding:18px 16px 17px;border-radius:15px;background:rgba(149,105,222,.065);border:1px solid rgba(193,163,247,.15);transition:border-color .25s,background .25s,transform .25s}
+.pf-stack-group:hover{border-color:rgba(193,163,247,.4);background:rgba(149,105,222,.10);transform:translateY(-2px)}
+.pf-stack-featured{background:linear-gradient(140deg,rgba(156,105,247,.15),rgba(109,69,176,.06));border-color:rgba(196,161,253,.28)}
+.pf-stack-group-heading{display:flex;align-items:center;gap:10px;min-height:47px;margin-bottom:17px}
+.pf-stack-icon{width:35px;height:35px;border-radius:10px;display:flex;justify-content:center;align-items:center;flex:none;border:1px solid rgba(196,156,249,.23);background:rgba(170,122,253,.12);font-size:12px;font-weight:800;letter-spacing:-.06em;color:#d6c1ff}
+.pf-stack-group h3{font-size:12px;font-weight:750;line-height:1.3;letter-spacing:-.015em;margin:0;color:#f7f2ff}
+.pf-stack-group-heading p{font-size:10px;margin:4px 0 0;color:#a99bc0;line-height:1.25}
+.pf-stack-pills{display:flex;gap:7px;flex-wrap:wrap;align-content:start}
+.pf-stack-pills span{font-size:10px;line-height:1.3;font-weight:550;color:#d8cbed;padding:7px 9px;border:1px solid rgba(194,161,245,.22);background:rgba(107,65,170,.12);border-radius:7px}
+.pf-stack-featured .pf-stack-pills span{border-color:rgba(195,162,254,.31)}
+@media(max-width:1300px){.pf-stack-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pf-trait{padding:12px 10px}.pf-traits-grid{gap:8px}}
+@media(max-width:1050px){.pf-trait{padding:15px 14px}.pf-stack-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}.pf-stack-group{padding:14px 11px}.pf-stack-group-heading{gap:7px}.pf-stack-icon{width:30px;height:30px}.pf-stack-pills span{padding:6px 8px}}
+@media(max-width:920px){.pf-stack-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:770px){.pf-traits-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.pf-card-lead{max-width:62ch}}
+@media(max-width:600px){.pf-traits-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pf-stack-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pf-stack-group{padding:14px 12px}.pf-technology-note{display:none}}
+@media(max-width:430px){.pf-stack-grid{grid-template-columns:1fr}.pf-trait p{font-size:10px}.pf-expertise-row{grid-template-columns:26px minmax(0,1fr);gap:9px}.pf-expertise-mark{display:none}.pf-stack-group-heading{margin-bottom:12px}}
+@media(prefers-reduced-motion:reduce){.pf-trait,.pf-stack-group,.pf-expertise-mark{transition:none}}
+@media(max-width:920px){.pf-traits-card,.pf-expertise-card{grid-column:span 12}.pf-traits-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.pf-traits-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}

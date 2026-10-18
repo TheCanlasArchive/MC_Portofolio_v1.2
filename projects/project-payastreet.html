@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="64x64" href="../img/assets/logo.png">
+    <title>Aurumelle_Pastries | Professional Case Study</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="../styles/project.css" />
+
+</head>
+<body>
+
+    <div class="bg-mesh"></div>
+    <div class="bg-grid"></div>
+
+    <div id="cursor"></div>
+    <div class="cursor-follower" id="follower"></div>
+
+    <nav>
+        <div class="container" style="display:flex; justify-content:space-between; width:100%;">
+            <a href="#" class="back-btn" onclick="window.history.back()">
+                <i data-lucide="chevron-left"></i>
+                CASE STUDIES_6
+            </a>
+            <div class="pill" style="border-color: var(--accent)">PayaStreet</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="hero" id="hero">
+            <span class="badge">Development & Architecture</span>
+            <h1>Paya Street Café: <span style="color:var(--accent)">Brewing Happinesss</span></h1>
+        </header>
+
+        <div class="content-layout">
+            <main class="main-content">
+                <div class="reveal featured-image">
+                    <img src="../img/payastreet_img/payastreet.png" alt="PayaStreet Interface">
+                    <img src="../img/payastreet_img/header.png" alt="PayaStreet Header Interface">
+                    <img src="../img/payastreet_img/about.png" alt="PayaStreet About Interface">
+                </div>
+
+                <section class="reveal card">
+                    <div class="card-title">
+                        <i data-lucide="terminal"></i>
+                        <h3>The Objective</h3>
+                    </div>
+                    <p style="margin-bottom: 20px;">
+                       Paya Street Café is a responsive web platform designed to bring the local café experience online. 
+                       The goal was to create a seamless digital storefront where customers can explore the menu, discover new seasonal offerings like the "Crozza," and connect with the brand's social community.
+                    </p>
+                    <p>
+                        The system prioritizes high-impact visuals and rapid access to location data and menu items to drive foot traffic to physical branches in Orchard, New Point, and SM Clark.
+                    </p>
+                </section>
+
+                <section class="reveal card">
+                    <div class="card-title">
+                        <i data-lucide="layers-3"></i>
+                        <h3>System Architecture</h3>
+                    </div>
+                    <div class="feature-list">
+                        <div class="feature-card">
+                            <i data-lucide="server" size="24"></i>
+                            <h4>Centralized API</h4>
+                            <p style="font-size:0.85rem">Custom Node.js/Express backend providing high-performance REST endpoints for menu data and customer inquiries.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <i data-lucide="map-pin" size="24"></i>
+                            <h4>Branch Intelligence</h4>
+                            <p style="font-size:0.85rem">Integrated location mapping to drive foot traffic toward physical branches in SM Clark, New Point, and Mexico.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <i data-lucide="share-2" size="24"></i>
+                            <h4>Social Ecosystem</h4>
+                            <p style="font-size:0.85rem">Seamless bridge between the web platform and social channels (TikTok/IG) to boost community engagement and reach.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <i data-lucide="database" size="24"></i>
+                            <h4>Data Persistence</h4>
+                            <p style="font-size:0.85rem">Optimized JSON-based storage for rapid retrieval of product lists, branch details, and customer messages.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <i data-lucide="line-chart" size="24"></i>
+                            <h4>Growth Insights</h4>
+                            <p style="font-size:0.85rem">Integration of GA4 and engagement tracking to monitor campaign performance and user flow through the landing pages.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <aside class="sidebar">
+                <div class="button-group" style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="https://paya-street-website.netlify.app/" target="_blank" class="reveal btn-launch">
+                        VISIT PROJECT
+                        <i data-lucide="external-link" size="18"></i>
+                    </a>
+
+                    <a href="https://github.com/sammyvie/Paya-Street_Website-" target="_blank" class="reveal btn-secondary" style="display: flex; align-items: center; justify-content: center; gap: 8px; padding: 12px; border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: white; text-decoration: none; font-weight: 600; font-size: 0.85rem; background: rgba(255,255,255,0.05); transition: 0.3s;">
+                        VIEW SOURCE
+                        <i data-lucide="github" size="18"></i>
+                    </a>
+                </div>
+
+                <div class="reveal meta-box">
+                    <div class="meta-item">
+                        <div class="meta-label">Project Role (Collaborative)</div>
+                        <div class="meta-value">Frontend Developer</div>
+                        <span style="display: block; font-size: 0.85em; opacity: 0.6; margin-top: 4px; font-weight: 400;">
+                            Team: [Marc Canlas], [Robyn Gonzales], [Samantha Wayne Gonzales/ Team Leader], [Kurt Justine Mangalino]
+                        </span>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Industry</div>
+                        <div class="meta-value">Food & Beverage / Quick-Service Retail</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Technologies</div>
+                        <div class="pill-group">
+                            <span class="pill">HTML</span>
+                            <span class="pill">CSS</span>
+                            <span class="pill">JS</span>
+                            <span class="pill">Node.js</span>
+                            <span class="pill">Express</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer style="padding: 100px 0; text-align: center; opacity: 0.4; font-size: 0.8rem;">
+        &copy; 2026 Paya Street Case Study. All Rights Reserved.
+    </footer>
+
+    <script src="../js/project.js"></script>
+</body>
+</html>

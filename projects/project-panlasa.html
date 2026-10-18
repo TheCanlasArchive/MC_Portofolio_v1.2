@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="64x64" href="../img/assets/logo.png">
+    <title>Panlasa Trip | Professional Case Study</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <link rel="stylesheet" href="../styles/project.css" />
+
+</head>
+<body>
+
+    <div class="bg-mesh"></div>
+    <div class="bg-grid"></div>
+
+    <div id="cursor"></div>
+    <div class="cursor-follower" id="follower"></div>
+
+    <nav>
+        <div class="container" style="display:flex; justify-content:space-between; width:100%;">
+            <a href="#" class="back-btn" onclick="window.history.back()">
+                <i data-lucide="chevron-left"></i>
+                CASE STUDIES_5
+            </a>
+            <div class="pill" style="border-color: var(--accent)">PanlasaTrip</div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="hero" id="hero">
+            <span class="badge">Development & Architecture</span>
+            <h1>PanlasaTrip: A Modern Filipino<span style="color:var(--accent)"> Food Blog</span></h1>
+        </header>
+
+        <div class="content-layout">
+            <main class="main-content">
+                <div class="reveal featured-image">
+                    <img src="../img/panlasa_trip/header.png" alt="PanlasaTrip Interface">
+                    <img src="../img/panlasa_trip/overview.png" alt="PalasaTrip Overview Interface">
+                    <img src="../img/panlasa_trip/about.png" alt="PanlasaTrip About Interface">
+                </div>
+
+                <section class="reveal card">
+                    <div class="card-title">
+                        <i data-lucide="terminal"></i>
+                        <h3>The Objective</h3>
+                    </div>
+                    <p style="margin-bottom: 20px;">
+                        "PanlasaTrip is a specialized WordPress-based blog platform dedicated to exploring and showcasing traditional Filipino frozen desserts. 
+                        The objective was to build a content-rich environment that provides curated articles, detailed recipe guides, and cultural insights into popular treats like Halo-Halo and Buko Pandan, focusing on high-readability and efficient content organization."
+                    </p>
+                </section>
+
+                <section class="reveal card">
+                    <div class="card-title">
+                        <i data-lucide="server"></i>
+                        <h3>System Architecture</h3>
+                    </div>
+                    <div class="feature-list">
+                        <div class="feature-card">
+                            <i data-lucide="layout-dashboard" size="24"></i>
+                            <h4>WordPress Engine</h4>
+                            <p style="font-size:0.85rem">A custom-themed CMS architecture leveraging PHP and MySQL for flexible content and metadata management.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <i data-lucide="library" size="24"></i>
+                            <h4>Content Taxonomy</h4>
+                            <p style="font-size:0.85rem">Efficient organization using categories and tags to group dessert types, recipe guides, and cultural insights.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <i data-lucide="image" size="24"></i>
+                            <h4>Media Optimization</h4>
+                            <p style="font-size:0.85rem">Implementation of lazy-loading and optimized formatting to serve high-quality culinary imagery with minimal latency.</p>
+                        </div>
+
+                        <div class="feature-card">
+                            <i data-lucide="message-square" size="24"></i>
+                            <h4>User Engagement</h4>
+                            <p style="font-size:0.85rem">Integrated comment systems and interaction loops designed to build a community around Filipino frozen desserts.</p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <aside class="sidebar">
+                <div class="button-group" style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="https://panlasatrip.wordpress.com/" target="_blank" class="reveal btn-launch">
+                        VISIT PROJECT
+                        <i data-lucide="external-link" size="18"></i>
+                    </a>
+                </div>
+
+                <div class="reveal meta-box">
+                    <div class="meta-item">
+                        <div class="meta-label">Project Role</div>
+                        <div class="meta-value">WordPress Developer & Content Strategist</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Industry</div>
+                        <div class="meta-value">Digital Media / Culinary Arts</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Technologies</div>
+                        <div class="pill-group">
+                            <span class="pill">WordPress CMS</span>
+                            <span class="pill">Theme Customization</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer style="padding: 100px 0; text-align: center; opacity: 0.4; font-size: 0.8rem;">
+        &copy; 2026 PanlasaTrip Case Study. All Rights Reserved.
+    </footer>
+
+    <script src="../js/project.js"></script>
+
+</body>
+</html>

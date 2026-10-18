@@ -1,0 +1,51 @@
+/* Education / intentionally compact editorial bento panel */
+.pf-card.pf-card-education {
+  display:block;
+  padding:0;
+  isolation:isolate;
+  background:linear-gradient(120deg,rgba(37,18,66,.97),rgba(23,11,42,.98));
+  border:1px solid rgba(192,151,247,.22);
+}
+.pf-card-education::before{
+  content:"";position:absolute;right:-12%;top:-68%;width:75%;height:130%;border-radius:50%;
+  background:radial-gradient(circle,rgba(170,128,248,.11),transparent 69%);pointer-events:none;z-index:-1;
+}
+.pf-card-education .edu-topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;
+  padding:22px 29px 15px;border-bottom:1px solid rgba(200,171,246,.10)}
+.edu-years{display:inline-flex;align-items:center;gap:9px;color:#c7b4e6;font-size:10px;letter-spacing:.11em;font-weight:750;white-space:nowrap}
+.edu-years-dot{display:block;width:6px;height:6px;border-radius:50%;background:#a99afb;box-shadow:0 0 0 4px rgba(166,132,246,.12)}
+.edu-content{display:grid;grid-template-columns:minmax(0,1.46fr) minmax(245px,.86fr);gap:27px;padding:25px 29px 28px;align-items:stretch}
+.edu-main{min-width:0;display:flex;flex-direction:column}
+.edu-school-row{display:flex;align-items:center;gap:16px;min-width:0}
+.edu-monogram{width:54px;height:54px;flex:none;border:1px solid rgba(196,167,255,.4);border-radius:12px;display:flex;align-items:center;justify-content:center;gap:2px;background:linear-gradient(145deg,rgba(176,135,252,.2),rgba(114,83,203,.05));position:relative;overflow:hidden}
+.edu-monogram>span:first-child{font-weight:800;font-size:18px;letter-spacing:-.065em;color:#f2eaff}
+.edu-monogram-mark{position:absolute;right:4px;top:1px;font-size:10px;color:#b89dfd}
+.edu-school-copy{min-width:0}
+.pf-card-education .edu-school-copy h2{font-size:clamp(18px,2vw,24px);margin:0;line-height:1.25;letter-spacing:-.04em}
+.pf-card-education .edu-location{display:flex;align-items:center;gap:7px;color:#ae9bc6;font-size:11px;margin:6px 0 0;line-height:1.5}
+.edu-location-dot{height:5px;width:5px;border:1px solid #a88fe9;transform:rotate(45deg);flex:none}
+.edu-degree{padding:25px 0 18px;max-width:670px}
+.edu-eyebrow,.edu-standing-label,.edu-side-kicker{font-size:10px;font-weight:750;letter-spacing:.115em;color:#a98cdf}
+.edu-degree h3{font-size:clamp(22px,2.25vw,30px);line-height:1.15;letter-spacing:-.045em;max-width:500px;margin:8px 0 11px;color:#f7f3ff;font-weight:750}
+.edu-degree h3 em{font-family:'Instrument Serif',Georgia,serif;font-size:1.09em;letter-spacing:-.016em;font-weight:400;color:#cbb0ff}
+.pf-card-education .edu-degree p{font-size:12px;line-height:1.75;color:#bcaecc;margin:0;max-width:560px}
+.edu-standing{border-top:1px solid rgba(195,160,243,.18);padding-top:16px;margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.edu-standing-value{font-size:11px;font-weight:700;display:inline-flex;align-items:center;gap:8px;color:#e8dafe}
+.edu-standing-dot{width:6px;height:6px;border-radius:50%;background:#a4e1bb;box-shadow:0 0 0 3px rgba(164,225,187,.1)}
+.edu-side{background:rgba(12,6,28,.37);border:1px solid rgba(198,158,246,.18);border-radius:14px;padding:20px 19px 15px;display:flex;flex-direction:column;gap:24px;min-width:0}
+.edu-side-kicker{display:flex;align-items:center;gap:9px}.edu-mini-line{height:1px;width:16px;background:#b49af5}
+.edu-focus p{font-size:11px;color:#aa9bbd;line-height:1.65;margin:9px 0 15px}
+.edu-focus-list{display:flex;gap:7px;flex-wrap:wrap}
+.edu-focus-list span{padding:7px 9px;border:1px solid rgba(174,136,240,.19);border-radius:7px;background:rgba(142,98,217,.09);color:#dbd0ef;font-size:10px;line-height:1.2;white-space:nowrap}
+.edu-recognition{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:center;min-width:0;padding:16px 0 3px;border-top:1px solid rgba(197,160,249,.17);margin-top:auto;text-decoration:none;color:inherit;transition:color .2s ease}
+.edu-award-number{color:#cbb1ff;font-size:33px;line-height:1;letter-spacing:-.08em;font-weight:750;font-variant-numeric:tabular-nums;position:relative}
+.edu-award-number span{font-size:10px;position:absolute;top:0;right:-8px;letter-spacing:0}
+.edu-award-copy{display:flex;flex-direction:column;gap:3px}.edu-award-copy strong{font-size:11px;line-height:1.3;color:#f7f2ff;font-weight:700}.edu-award-copy small{font-size:10px;color:#9e8db9;line-height:1.4}
+.edu-award-arrow{border:1px solid rgba(200,164,247,.24);border-radius:8px;height:27px;width:27px;display:grid;place-items:center;color:#d3bdff;font-size:15px;transition:transform .2s,border-color .2s}
+.edu-recognition:hover .edu-award-arrow{transform:translate(2px,-2px);border-color:rgba(209,180,255,.6)}
+.edu-recognition:focus-visible{outline:2px solid #c9b2ff;outline-offset:5px;border-radius:4px}
+@media(max-width:1200px){.edu-content{grid-template-columns:minmax(0,1.1fr) minmax(205px,.9fr);gap:17px}.edu-side{padding:17px 15px}.edu-focus-list span{white-space:normal}}
+@media(max-width:720px){.edu-content{grid-template-columns:1fr;gap:18px}.edu-degree{padding:23px 0 20px}.edu-side{padding:19px;gap:19px}.edu-recognition{padding-top:15px}.edu-focus-list span{white-space:nowrap}}
+@media(max-width:540px){.pf-card.pf-card-education{padding:0;border-radius:19px}.pf-card-education .edu-topbar{padding:21px 18px 15px;gap:10px}.edu-years{font-size:9px}.edu-content{padding:20px 18px 21px;gap:17px}.edu-school-row{gap:12px}.edu-monogram{height:47px;width:47px;border-radius:10px}.edu-monogram>span:first-child{font-size:16px}.pf-card-education .edu-school-copy h2{font-size:19px}.edu-degree h3{font-size:26px}.edu-degree{padding:21px 0 18px}.edu-side{padding:17px 15px}}
+@media(max-width:360px){.edu-years{letter-spacing:.06em;font-size:8px}.pf-card-education .edu-school-copy h2{font-size:17px}.edu-focus-list span{white-space:normal}}
+@media(prefers-reduced-motion:reduce){.edu-award-arrow{transition:none}}

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Marc Canlas — Blog. Thoughts on frontend development, design, and the craft of building for the web." />
+        <title>Blog — Marc Canlas</title>
+
+        <link rel="icon" type="image/png" sizes="64x64" href="img/assets/logo.png">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
+
+        <!-- Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+        <script src="https://unpkg.com/lucide@latest"></script>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/blog.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles/portfolio-finish.css" />
+        <link rel="stylesheet" href="styles/portfolio-polish.css" />
+        <link rel="stylesheet" href="styles/journal-editorial.css" />
+      <link rel="stylesheet" href="styles/footer-compact.css" />
+</head>
+
+    <body>
+        <div id="cursor"></div>
+        <div class="cursor-follower" id="follower"></div>
+
+        <div class="background-container">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+
+        <!-- NAVBAR -->
+        <header>
+            <nav class="navbar">
+                <div class="nav-container">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img/assets/logo.png" alt="Marc Canlas Logo">
+                        </a>
+                    </div>
+
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="index.html#home" class="nav-item">
+                            <i class="fas fa-home"></i><span>Home</span>
+                        </a></li>
+                        <li><a href="index.html#about-split" class="nav-item">
+                            <i class="fas fa-user"></i><span>About</span>
+                        </a></li>
+                        <li><a href="projects.html" class="nav-item">
+                            <i class="fas fa-rocket"></i><span>Projects</span>
+                        </a></li>
+                        <li><a href="blog.html" class="nav-item active">
+                            <i class="fas fa-pen-nib"></i><span>Blog</span>
+                        </a></li>
+                        <li><a href="index.html#contact" class="nav-item">
+                            <i class="fas fa-envelope"></i><span>Contact</span>
+                        </a></li>
+                    </ul>
+
+                    <button class="hamburger" id="hamburger" type="button" aria-label="Toggle navigation" aria-controls="nav-links" aria-expanded="false">
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
+            </nav>
+            <div class="mobile-overlay" id="mobile-overlay"></div>
+        </header>
+
+        <!-- JOURNAL ARCHIVE HEADING -->
+        <section class="blog-page-hero journal-archive-hero" aria-labelledby="journal-archive-title">
+            <div class="blog-page-hero-inner journal-archive-hero__inner">
+                <a href="index.html#blog" class="blog-back-link"><i class="fas fa-arrow-left" aria-hidden="true"></i> Back to portfolio</a>
+                <header class="journal-editorial__header journal-archive-hero__head">
+                    <p class="journal-editorial__eyebrow"><span class="journal-editorial__line" aria-hidden="true"></span> JOURNAL / ALL ENTRIES <span class="journal-editorial__line" aria-hidden="true"></span></p>
+                    <h1 id="journal-archive-title">All <em>writing.</em></h1>
+                    <p class="journal-editorial__subtitle">Stories about frontend development, design decisions, and the lessons behind the work.</p>
+                </header>
+                <div class="blog-filter-row" aria-label="Filter journal entries">
+                    <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">All articles <span>02</span></button>
+                    <button class="filter-btn" type="button" data-filter="UI/UX" aria-pressed="false">UI/UX</button>
+                    <button class="filter-btn" type="button" data-filter="Process" aria-pressed="false">Process</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG POSTS GRID -->
+        <section class="blog-all-posts">
+            <div class="blog-page-container">
+
+                <div class="blog-post-count"><span id="postCount">2</span> articles</div>
+
+                <div class="blog-all-grid journal-editorial__grid journal-editorial__grid--archive" id="blogGrid">
+                    <article class="blog-full-card journal-entry" data-category="Process">
+                        <div class="journal-entry__masthead">
+                            <span class="journal-entry__index">01 <span>/ ARTICLE</span></span>
+                            <time class="journal-entry__date" datetime="2026-05">May 2026</time>
+                        </div>
+                        <div class="journal-entry__body">
+                            <p class="journal-entry__topic"><span class="journal-entry__topic-mark" aria-hidden="true"></span> DEVELOPMENT · PERSONAL</p>
+                            <h2><a href="blog/blog-my-journey.html">My Journey as an IT Web Developer</a></h2>
+                            <p class="journal-entry__excerpt">From a boarding house room and a blank Python file to building full websites — how my journey started in 2023, and what I've learned along the way.</p>
+                        </div>
+                        <div class="journal-entry__foot">
+                            <span class="journal-entry__series">FIELD NOTE 01</span>
+                            <a href="blog/blog-my-journey.html" class="journal-entry__link" aria-label="Read My Journey as an IT Web Developer">Read article <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+                        </div>
+                    </article>
+                    <article class="blog-full-card journal-entry" data-category="UI/UX">
+                        <div class="journal-entry__masthead">
+                            <span class="journal-entry__index">02 <span>/ ARTICLE</span></span>
+                            <time class="journal-entry__date" datetime="2026-05">May 2026</time>
+                        </div>
+                        <div class="journal-entry__body">
+                            <p class="journal-entry__topic"><span class="journal-entry__topic-mark" aria-hidden="true"></span> UI/UX · CREATIVE PROCESS</p>
+                            <h2><a href="blog/blog-design-process.html">The Way I Design: Picky, Patient, and Always Revising</a></h2>
+                            <p class="journal-entry__excerpt">Looking for the right reference, refining every detail, and making plenty of revisions — a closer look at how my design process has evolved.</p>
+                        </div>
+                        <div class="journal-entry__foot">
+                            <span class="journal-entry__series">FIELD NOTE 02</span>
+                            <a href="blog/blog-design-process.html" class="journal-entry__link" aria-label="Read The Way I Design">Read article <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Empty state -->
+                <div class="blog-empty-state" id="emptyState" style="display:none;">
+                    <i class="fas fa-folder-open"></i>
+                    <p>No entries found in this category.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer-section site-footer" id="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__main">
+        <div class="site-footer__message">
+          <div class="site-footer__eyebrow">Available for new projects</div>
+          <h2 class="site-footer__heading">Have an idea? <em>Let's make it real.</em></h2>
+        </div>
+        <div class="site-footer__contact">
+          <p class="site-footer__intro">A website, an interface, or simply a conversation. I'd love to hear what you're working on.</p>
+          <a class="site-footer__email" href="mailto:m4canlas@gmail.com" aria-label="Email Marc at m4canlas@gmail.com">
+            <span>m4canlas@gmail.com</span><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="site-footer__base">
+        <a class="site-footer__brand" href="index.html#home" aria-label="Marc Canlas — back to home"><span class="site-footer__monogram">MC</span><span class="site-footer__name">Marc Canlas</span></a>
+        <nav class="site-footer__links" aria-label="Footer navigation">
+          <a href="index.html#home">Home</a><a href="index.html#about-split">About</a><a href="projects.html">Projects</a><a href="blog.html">Blog</a><a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="site-footer__social" aria-label="Social profiles">
+          <a href="https://github.com/TheCanlasArchive" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.11.76-.24.76-.54v-2.12c-3.09.68-3.74-1.31-3.74-1.31-.5-1.27-1.23-1.61-1.23-1.61-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.69 2.61 1.2 3.24.91.1-.72.39-1.2.71-1.48-2.47-.28-5.07-1.24-5.07-5.49 0-1.21.44-2.2 1.14-2.97-.12-.28-.49-1.41.1-2.94 0 0 .93-.3 3.05 1.14A10.6 10.6 0 0 1 12 6.03c.94 0 1.87.13 2.75.37 2.12-1.44 3.05-1.14 3.05-1.14.59 1.53.22 2.66.1 2.94.71.77 1.14 1.76 1.14 2.97 0 4.26-2.6 5.2-5.08 5.48.4.35.76 1.02.76 2.06v3.28c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg></a>
+          <a href="https://www.linkedin.com/in/marc-ordonez-canlas-a34320311/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M20.45 2H3.55C2.7 2 2 2.67 2 3.5v17c0 .83.7 1.5 1.55 1.5h16.9c.86 0 1.55-.67 1.55-1.5v-17c0-.83-.69-1.5-1.55-1.5ZM8 18.75H5V9h3v9.75ZM6.5 7.65a1.72 1.72 0 1 1 0-3.44 1.72 1.72 0 0 1 0 3.44Zm12.25 11.1h-3V14c0-1.14-.02-2.61-1.59-2.61-1.59 0-1.83 1.25-1.83 2.53v4.83h-3V9h2.88v1.33h.04c.4-.76 1.38-1.56 2.85-1.56 3.05 0 3.65 2.01 3.65 4.62v5.36Z"/></svg></a>
+          <a href="https://www.facebook.com/marcordonez.canlas.906" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M22 12.07C22 6.51 17.52 2 12 2S2 6.51 2 12.07a10.06 10.06 0 0 0 8.44 9.96v-7.08H7.9v-2.88h2.54V9.94c0-2.51 1.5-3.9 3.79-3.9 1.1 0 2.25.2 2.25.2v2.49h-1.27c-1.25 0-1.64.78-1.64 1.57v1.88h2.79l-.45 2.88h-2.34v7.08A10.06 10.06 0 0 0 22 12.07Z"/></svg></a>
+        </div>
+      </div>
+      <div class="site-footer__legal">
+        <p>© 2026 Marc O. Canlas</p>
+        <p>Designed and built in <span>Angeles City, Philippines.</span></p>
+      </div>
+    </div>
+    <a href="index.html#home" class="scroll-top" id="scrollTopBtn" aria-label="Back to top"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+  </footer>
+
+        <script src="js/script.js"></script>
+        <script>
+            // Filter logic
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.blog-full-card');
+            const countEl = document.getElementById('postCount');
+            const emptyEl = document.getElementById('emptyState');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    filterBtns.forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+
+                    const filter = btn.dataset.filter;
+                    let visible = 0;
+
+                    cards.forEach(card => {
+                        const match = filter === 'all' || card.dataset.category === filter;
+                        card.style.display = match ? '' : 'none';
+                        if (match) visible++;
+                    });
+
+                    countEl.textContent = visible;
+                    emptyEl.style.display = visible === 0 ? 'flex' : 'none';
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,174 @@
+/* ABOUT / 02 — Crafted to share the selected-work typography and spacing.
+   Everything is scoped: existing global backgrounds and other sections are unchanged. */
+.about-editorial {
+  padding: 90px 24px 110px;
+  background: transparent;
+  color: #f8f5ff;
+  scroll-margin-top: 95px;
+}
+.about-editorial__inner { max-width: 1132px; margin: 0 auto; }
+
+/* Shared section masthead language: small index, Inter headline, Instrument Serif accent. */
+.about-editorial__header {
+  text-align: center;
+  margin: 0 auto 44px;
+  max-width: 760px;
+}
+.about-editorial__eyebrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 15px;
+  color: #bdaaf3;
+  font: 700 10px/1.4 'Inter', sans-serif;
+  letter-spacing: .19em;
+}
+.about-editorial__line { display:block; width:24px; height:1px; background:linear-gradient(90deg,#b28bff,#779fff); }
+.about-editorial__header h2 {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(2.15rem, 3.8vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -.056em;
+  line-height: 1.09;
+  color: #fcf9ff;
+  margin: 0;
+  text-shadow: none;
+}
+.about-editorial__header h2 em {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-weight: 400;
+  font-size: 1.07em;
+  letter-spacing: -.015em;
+  color: #cab4ff;
+}
+.about-editorial__subtitle {
+  max-width: 490px;
+  margin: 14px auto 0;
+  color: #c7bdd9;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* A stable editorial grid. The portrait supports the story rather than dominating it. */
+.about-editorial__layout {
+  display: grid;
+  grid-template-columns: minmax(265px, 342px) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(38px, 6vw, 76px);
+  border-top: 1px solid rgba(214, 194, 255, .18);
+  padding-top: 33px;
+}
+.about-editorial__identity { min-width:0; }
+.about-editorial__photo-frame {
+  position: relative;
+  overflow:hidden;
+  background:#eeeaf2;
+  border-radius: 12px;
+  border:1px solid rgba(211,192,252,.25);
+  box-shadow: 0 18px 46px rgba(13,6,35,.16);
+}
+.about-editorial__portrait {
+  width:100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: top;
+  display:block; filter: saturate(.92);
+}
+.about-editorial__location {
+  position:absolute; left:50%; bottom:14px;
+  transform:translateX(-50%);
+  width:max-content; max-width:calc(100% - 26px);
+  padding:9px 13px;
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  color:#f0eaff; background:rgba(19,12,35,.88);
+  border:1px solid rgba(236,223,255,.19); border-radius:8px;
+  font:500 11px/1.2 'Inter',sans-serif;
+  backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
+}
+.about-editorial__location i { color:#c3a7ff; }
+.about-editorial__facts {
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  margin-top:12px;
+  background:rgba(20,11,42,.68);
+  border:1px solid rgba(190,161,252,.23);
+  border-radius:11px;
+  padding:17px 9px;
+  backdrop-filter: blur(12px); -webkit-backdrop-filter:blur(12px);
+}
+.about-editorial__fact { display:flex; flex-direction:column; align-items:center; text-align:center; gap:5px; min-width:0; }
+.about-editorial__fact + .about-editorial__fact { border-left:1px solid rgba(211,191,252,.17); }
+.about-editorial__fact strong { font: 750 25px/1 'Inter',sans-serif; color:#fff; letter-spacing:-.055em; }
+.about-editorial__fact span { font: 500 10px/1.45 'Inter',sans-serif; color:#baafd1; }
+.about-editorial__photo-caption { display:flex; justify-content:space-between; gap:10px; padding:13px 2px 0; margin:0; color:#b3a2d0; font:650 9px/1.3 'Inter',sans-serif; letter-spacing:.10em; }
+
+.about-editorial__content { min-width:0; }
+.about-editorial__overline { display:flex;align-items:center;gap:9px; margin: 4px 0 15px; font:700 10px/1.4 'Inter',sans-serif; letter-spacing:.14em; color:#c5adfd; }
+.about-editorial__small-line {width:17px;height:1px; background:#ad90ee;display:inline-block; flex-shrink:0;}
+.about-editorial__story h3 {
+  margin:0 0 22px;
+  font: 750 clamp(1.75rem,2.6vw,2.5rem)/1.19 'Inter', sans-serif;
+  letter-spacing:-.049em; color:#f8f5ff;
+  max-width:660px;
+}
+.about-editorial__story h3 em {
+  font-family:'Instrument Serif', Georgia,serif;
+  font-weight:400; font-size:1.14em; letter-spacing: -.012em; color:#c7adff;
+}
+.about-editorial__bio { max-width:665px; }
+.about-editorial__bio p {
+  font:400 13.7px/1.85 'Inter',sans-serif;
+  color:#c7bfd6; margin:0 0 13px;
+}
+.about-editorial__bio p:last-child { margin-bottom:0; }
+
+/* A short, ruled skills inventory, not a dense badge container. */
+.about-editorial__expertise { margin-top:26px; border-top:1px solid rgba(211,191,252,.23); }
+.about-editorial__expertise-header { display:flex; justify-content:space-between; align-items:baseline; gap:12px; padding:18px 0 10px; }
+.about-editorial__expertise-header h4 { margin:0; font:700 14px/1.4 'Inter',sans-serif; letter-spacing:-.025em; color:#faf7ff; }
+.about-editorial__expertise-header > span {font:700 9px/1.3 'Inter',sans-serif; color:#9f91b9; letter-spacing:.14em; }
+.about-editorial__skill-row { display:grid; grid-template-columns:135px minmax(0,1fr); gap:18px; align-items:start; padding:12px 0; border-bottom:1px solid rgba(211,191,252,.15); }
+.about-editorial__skill-heading { display:flex;align-items:baseline;gap:10px; padding-top:5px; }
+.about-editorial__skill-heading span { color:#a98ce3; font:700 9px/1.4 'Inter',sans-serif; }
+.about-editorial__skill-heading strong {font:600 11px/1.4 'Inter',sans-serif;color:#dad0ef; white-space:nowrap; }
+.about-editorial__skill-tags { display:flex; gap:6px; flex-wrap:wrap; min-width:0; }
+.about-editorial__skill-tags span { display:inline-flex;align-items:center; border:1px solid rgba(182,150,240,.22); border-radius:5px; background:rgba(40,23,74,.49); color:#d8ccec; padding:5px 9px; font:500 10px/1.45 'Inter',sans-serif; }
+
+.about-editorial__actions {display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:25px;}
+.about-editorial__button {
+  display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:42px;
+  text-decoration:none;border-radius:8px;border:1px solid rgba(194,162,255,.35);
+  font:650 11px/1.3 'Inter',sans-serif;padding:12px 18px;
+  transition:transform .2s ease, background .2s ease, border-color .2s ease;
+}
+.about-editorial__button i { font-size:11px; }
+.about-editorial__button--primary {background:#b9a0fb;color:#19102f;border-color:#b9a0fb;}
+.about-editorial__button--primary:hover {background:#d0bcff;border-color:#d0bcff;transform:translateY(-2px);}
+.about-editorial__button--secondary {background:rgba(23,12,46,.35);color:#eadfff;}
+.about-editorial__button--secondary:hover {border-color:#bba0f8;background:rgba(86,56,144,.25);transform:translateY(-2px);}
+.about-editorial__button:focus-visible {outline:2px solid #e4d1ff;outline-offset:3px;}
+
+@media (max-width: 950px) {
+  .about-editorial__layout { grid-template-columns:minmax(230px,310px) minmax(0,1fr);gap:34px; }
+  .about-editorial__skill-row { grid-template-columns:1fr;gap:8px; }
+}
+@media (max-width: 690px) {
+  .about-editorial {padding:74px 18px 80px;}
+  .about-editorial__header {margin-bottom:30px;}
+  .about-editorial__layout {grid-template-columns:1fr;gap:32px;padding-top:24px;}
+  .about-editorial__identity {width:min(100%,365px);margin-inline:auto;}
+  .about-editorial__portrait {aspect-ratio: 4/4.55;}
+  .about-editorial__photo-caption {display:none;}
+  .about-editorial__overline {margin-top:0;}
+  .about-editorial__story h3 {font-size:clamp(1.75rem,7vw,2.3rem);}
+  .about-editorial__bio p {font-size:13.5px;line-height:1.8;}
+  .about-editorial__skill-row {grid-template-columns:1fr; gap:9px;}
+  .about-editorial__skill-heading {padding-top:0;}
+}
+@media (max-width: 410px) {
+  .about-editorial {padding-inline:16px;}
+  .about-editorial__header h2 {font-size:clamp(2rem,10vw,2.45rem);}
+  .about-editorial__actions {display:grid;grid-template-columns:1fr;}
+  .about-editorial__button {width:100%;}
+  .about-editorial__photo-caption {display:none;}
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-editorial__button {transition:none;}
+}
